@@ -32,7 +32,7 @@ public class Main
         // e. % -> Modulo/Reminder Division(Results in producing a reminder 
         // of a division opertion)
 
-        System.out.println("Arithematic Operators:");
+        System.out.println("1. Arithematic Operators:");
         int a = 5, b = 45;
         System.out.printf("Addition of %d and %d is: %d", a, b, (a + b)); // 50
         System.out.printf("\nSubtraction of %d from %d is: %d", b, a, (b - a)); // 40
@@ -67,7 +67,7 @@ public class Main
         // For now, think about the if statement like a block of code that gets executed if some condition is true. Else, the block of code under it not get executed.
         // In that condition we are going to put the comparison of operands.
 
-        System.out.println("Comparison Operators:");
+        System.out.println("2. Comparison Operators:");
         int c = 34, d = 43;
         if (d > c) { // results true
             System.out.printf("Greater among %d and %d is: %d. And that's: %b.", d, c, d, (d > c));
