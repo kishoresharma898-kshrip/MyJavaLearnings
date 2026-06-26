@@ -104,7 +104,7 @@ public class Main
 
         // Examples for such operators are: !(logical not), &&(logical AND) and ||(logical OR)
 
-        // 1. Logical NOT Operator(!): If placed before truthy condition, it is converted to falsy. And if placed before a falsy condition, it becoming truthy.
+        // 1. Logical NOT Operator(!): If placed before truthy condition, it is converted to falsy. And if placed before a falsy condition, it becomes truthy.
         // 2. Logical AND Operator(&&): Checks whether both the conditions among the either sides of the operator are true. If yes, it results/returns true. Else results/returns false.
         // 3. Logical OR Operator(||): Checks if either among the conditions is true. If yes, it results/returns true. Else, results/returns false.
 
