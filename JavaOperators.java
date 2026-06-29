@@ -235,5 +235,126 @@ public class Main
         // Note: 1. Apply this operator for single conditional blocks or Minimal number of cinditional blocks.
         // 2. It can hold for as many as conditional blocks but for reading it takes high amount of time and debugging is quite difficult if the doesn't work as desired.
         // 3. And, the same can be applied for floats and doubles as well.
+        
+        System.out.println();
+
+        // 7. Bitwise Operators:
+
+        // These operators are used for testing the bits, or shifting them to the right or left.
+        // These operators may not be applied to floats or doubles.
+        // They carry out bitwise(bit-by-bit) operation like NOT, OR, AND and XOR operations on numerics and alphanumeric values.
+        // They carry out the maneuvering of each bit of the number.
+        // They are executed with any primary type.
+        // They perform update and query operations of the Indexed Binary Trees.
+
+        // 1. Bitwise NOT or Bitwise Complementary operator:
+
+        // Denoted by ~. Carries out bitwise NOT operation for the operand given as input.
+        // It complements every bit of the operand(i.e., Every makes 1 to 0 and vice-versa).
+
+        // 2. Bitwise OR operator:
+
+        // Denoted by |. Carries out bitwise OR operation for the operands on either sides.
+        // If any bit of the operands is 1 then the output of the operation is 1. 
+        // Else the output of that operation is 0 if both the bits of operands is 0.
+
+        // 3. Bitwise AND operator:
+
+        // Denoted by &. Carries out bitwise AND operation for the operands on either sides.
+        // If both bits of the operands is 1 then the output of the operation is 1. 
+        // Else the output of that operation is 0 if any one of the bits of operands is 0.
+
+        // 4. Bitwise XOR operator:
+
+        // Denoted by ^. Carries out bitwise XOR operation for the operands on either sides.
+        // If both the bits of operands are not alike(i.e., a = 0 and b = 1) then ouput is 1. Because 1.NOT(0) + NOT(1).0 = 1.1 + 0.0 = 1.
+        // Else the output of that operation is 0 if both the bits of operands are alike(i.e., a = 1 and b = 1). Because 1.NOT(1) + NOT(1).1 = 1.0 + 0.1 = 0.
+        // Same XOR operation results 0 if both the bits of operands are 0 as well. Because Because 0.NOT(0) + NOT(0).0 = 0.1 + 1.0 = 0.
+
+        System.out.println("7. Bitwise Operators:");
+        a = 3; // Overwriting a with 3
+        b = 7; // Overwriting b with 7
+
+        int bitwiseNOT = ~a; // a = 3 = 0011 => ~a = -(3 + 1) = -4, for a sigend integer n the quick form of getting an output is ~n = -(n + 1)
+        System.out.println("Bitwise NOT of " + a + " is: " + bitwiseNOT); // Output: 12
+        // Explanation: Follows 2's complement method for signed integers
+
+        int bitwiseOR = a | b;
+        System.out.println("Bitwise OR of " + a + " and " + b + " is: " + bitwiseOR); // Output: 7
+        // Explanation:
+        // a = 3 = 0011
+        // b = 7 = 0111
+        // Result = 0111 = 7
+
+        int bitwiseAND = a & b;
+        System.out.println("Bitwise AND of " + a + " and " + b + " is: " + bitwiseAND); // Output: 3
+        // Explanation:
+        // a = 3 = 0011
+        // b = 7 = 0111
+        // Result = 0011 = 3
+
+        int bitwiseXOR = a ^ b;
+        System.out.println("Bitwise XOR of " + a + " and " + b + " is: " + bitwiseXOR); // Output: 4
+        // Explanation:
+        // a = 3 = 0011
+        // b = 7 = 0111
+        // Result = 0100 = 4
+
+        System.out.println();
+
+        // 8. Shift Operators:
+
+        // These operators shift the bits of left operand by the number of bits specified in the right operand.
+        // The value of new bit stream is shifted left or right into the number depending upon the number defined from before.
+
+        // Examples for such kind of operators are:
+        // a. left-shift operator: 
+        // Denoted by <<. Left shifts the left operand to number of bits specified on the right operand. 
+        // The new bit stream includes zeroes appearing in the lower-order position.
+
+        // b. right-shift opertor: 
+        // Denoted by >>. Right shifts the left operand to number of bits specified on the right operand. 
+        // Profilerates the active sign bit, which means a negative number will be negative even after being shifted.
+
+        // c. right-shift with 0 insertion: 
+        // Denoted by >>>. 
+        // Right shifts the left operand to number of bits specified on the right operand by inserting a zero as the most significant bit.
+
+        System.out.println("8. Shift Operators:");
+        c = -9; // Overwriting c with -9
+        d = 2; //Overwriting d with 2
+        System.out.println("Left shift of " + c + " by " + d + " is:" + (c << d));
+        // Explanation:
+        // c = -9(decimal or base 10) = 11111111111111111111111111110111(32-bit binary or base 2 form of -9)
+        // c << d = -9 << 2 (base 10 form)= 11111111111111111111111111011100 (base 2 form) = = -36 (base 10 form)
+        System.out.println("Right shift of " + c + " by " + d + " is:" + (c >> d));
+        // Explanation:
+        // c = -9(decimal or base 10) = 11111111111111111111111111110111(32-bit binary or base 2 form of -9)
+        // c << d = -9 >> 2 (base 10 form)= 11111111111111111111111111111101 (base 2 form) = -3 (base 10 form)
+        System.out.println("Right shift with 0 insertion of " + c + " by " + d + " is:" + (c >>> d));
+        // Explanation:
+        // c = -9(decimal or base 10) = 11111111111111111111111111110111(32-bit binary or base 2 form of -9)
+        // c << d = -9 >> 2 (base 10 form)= 00111111111111111111111111111101 (base 2 form) = 1073741821 (base 10 form)
+
+        // Note: 1. To perform bit manipulations primal shorter than 32 bits, we must remember that the compiler promotes all operands to 32-bits prior to the operation.
+        // 2. The assignment operator "=" can be united with the "shift" and "bitwise" operators like the arithematic operators. The result is as you would expect.
+
+        // 9. Special Operators:
+        
+        // In java, there are 2 special operators. They are:
+
+        // 1. instanceof operator:
+        // The instanceof operator is an object reference operator and returns true if the object on the left-hand side is an instance of the class given on the right-hand side.
+        // This operator allows us to determined whether the object belongs to a particular class or not.
+        // Example: person instanceof Student => Results true if person is an instance of Student class. Else results false.
+
+        // 2. Dot(.) operator:
+        // The dot(.) operator is used to access the instance variables and methods of class objects. 
+        // Examples:
+        // person1.age -> Reference to the variable age
+        // person1.salary() -> Reference to the method salary()
+        // It is also used to access classes and subpackages from a package.
+
+        // Note: These special operators are very useful and become meaningful in Classes and Objects and in OOPS concepts.
     }
 }
