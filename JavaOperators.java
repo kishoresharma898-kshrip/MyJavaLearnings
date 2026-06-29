@@ -276,7 +276,7 @@ public class Main
         b = 7; // Overwriting b with 7
 
         int bitwiseNOT = ~a; // a = 3 = 0011 => ~a = -(3 + 1) = -4, for a sigend integer n the quick form of getting an output is ~n = -(n + 1)
-        System.out.println("Bitwise NOT of " + a + " is: " + bitwiseNOT); // Output: 12
+        System.out.println("Bitwise NOT of " + a + " is: " + bitwiseNOT); // Output: -4
         // Explanation: Follows 2's complement method for signed integers
 
         int bitwiseOR = a | b;
