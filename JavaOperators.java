@@ -219,15 +219,16 @@ public class Main
         System.out.println("6. Conditional Operator:");
         int n = -34;
         String res = (n > 0) ? "Positive" : (n == 0) ? "Zero" : "Negative";
-        System.out.println("Result of the conditional operator applied for n is: " + res);
+        System.out.println("Positive/Negative check using conditional operator applied for n is: " + res);
+        System.out.println("As, n = " + n);
         // Alter the value of n with -34 or 0. If -34, the res would be Negative, else if 0 res would Zero.
 
         // Similarly we check for even and odd nature of numbers
         String nature = ((n > 0) && (n % 2 == 0)) ? "Even" : ((n > 0) && (n % 2 != 0)) ? "Odd" : "Enter a positive integer value for n other than negatives or zero.";
         if (nature == "Even") {
-            System.out.println("Result of the conditional operator applied for n is: " + nature);
+            System.out.println("Even/Odd check using conditional operator applied for n is: " + nature);
         } else if (nature == "Odd") {
-            System.out.println("Result of the conditional operator applied for n is: " + nature);
+            System.out.println("Even/Odd check using conditional operator applied for n is: " + nature);
         } else {
             System.out.println(nature);
         }
