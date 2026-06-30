@@ -331,11 +331,11 @@ public class Main
         System.out.println("Right shift of " + c + " by " + d + " is:" + (c >> d));
         // Explanation:
         // c = -9(decimal or base 10) = 11111111111111111111111111110111(32-bit binary or base 2 form of -9)
-        // c << d = -9 >> 2 (base 10 form)= 11111111111111111111111111111101 (base 2 form) = -3 (base 10 form)
+        // c >> d = -9 >> 2 (base 10 form)= 11111111111111111111111111111101 (base 2 form) = -3 (base 10 form)
         System.out.println("Right shift with 0 insertion of " + c + " by " + d + " is:" + (c >>> d));
         // Explanation:
         // c = -9(decimal or base 10) = 11111111111111111111111111110111(32-bit binary or base 2 form of -9)
-        // c << d = -9 >> 2 (base 10 form)= 00111111111111111111111111111101 (base 2 form) = 1073741821 (base 10 form)
+        // c >>> d = -9 >>> 2 (base 10 form)= 00111111111111111111111111111101 (base 2 form) = 1073741821 (base 10 form)
 
         // Note: 1. To perform bit manipulations primal shorter than 32 bits, we must remember that the compiler promotes all operands to 32-bits prior to the operation.
         // 2. The assignment operator "=" can be united with the "shift" and "bitwise" operators like the arithematic operators. The result is as you would expect.
