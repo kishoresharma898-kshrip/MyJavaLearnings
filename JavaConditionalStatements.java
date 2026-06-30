@@ -193,7 +193,7 @@ public class Main
                 System.out.println("This traffic is under maintenance. Please follow the traffic police's signals.");
         }
 
-        // Try altering the values of the variables declared discussed in the examples and observe the changes.
+        // Try altering the values of the variables declared which are discussed in the examples and observe the changes.
         // The above all conditional statements are almost similar to the switches connected between the branches in logic gates and other electrical and electronic circuits.
     }
 }
