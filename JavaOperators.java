@@ -327,7 +327,7 @@ public class Main
         System.out.println("Left shift of " + c + " by " + d + " is:" + (c << d));
         // Explanation:
         // c = -9(decimal or base 10) = 11111111111111111111111111110111(32-bit binary or base 2 form of -9)
-        // c << d = -9 << 2 (base 10 form)= 11111111111111111111111111011100 (base 2 form) = = -36 (base 10 form)
+        // c << d = -9 << 2 (base 10 form)= 11111111111111111111111111011100 (base 2 form) = -36 (base 10 form)
         System.out.println("Right shift of " + c + " by " + d + " is:" + (c >> d));
         // Explanation:
         // c = -9(decimal or base 10) = 11111111111111111111111111110111(32-bit binary or base 2 form of -9)
