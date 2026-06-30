@@ -141,7 +141,7 @@ public class Main
         // Along with this there will be one more block that is default.
         // The default block executes by default if any of the cases are not matched. It is similar to the else block in if-else ladder structure.
         // The default statement in a switch-case is optional. It is not madatory for the code to compile or function;
-        // it simply serves as fallback to catch any values that do not match the explicitly defined in the case statements. And it does not required a break statement to stop the execution.
+        // it simply serves as fallback to catch any values that do not match the explicitly defined in the case statements. And it does not required a break statement to stop the execution in some cases.
 
         // The above examples can be restructured using the switch statement.
 
