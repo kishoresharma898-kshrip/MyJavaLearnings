@@ -141,7 +141,8 @@ public class Main
         // Along with this there will be one more block that is default.
         // The default block executes by default if any of the cases are not matched. It is similar to the else block in if-else ladder structure.
         // The default statement in a switch-case is optional. It is not madatory for the code to compile or function;
-        // it simply serves as fallback to catch any values that do not match the explicitly defined in the case statements. And it does not required a break statement to stop the execution in some cases.
+        // it simply serves as fallback to catch any values that do not match the explicitly defined in the case statements. 
+        // And it does not required a break statement to stop the execution. Thus break statement is an optional for this statement.
 
         // The above examples can be restructured using the switch statement.
 
@@ -170,7 +171,7 @@ public class Main
             case 4: System.out.println("Thursday. As today's day number is: " + day); break;
             case 5: System.out.println("Friday. As today's day number is: " + day); break;
             case 6: System.out.println("Saturday. As today's day number is: " + day + ". Weekend"); break;
-            case 7: System.out.println("Sunday. As today's day number is: " + day + ". Weekend"); break;
+            case 7: System.out.println("Sunday. As today's day number is: " + day + ". Weekend"); break; // This case gets executed.
             default: System.out.println("Invalid day number. Please enter values between 1 and 7.");
         }
 
@@ -181,7 +182,7 @@ public class Main
         light_color = "Red";
         switch(light_color) {
             case "Red":
-                System.out.println("Stop!!! Because the traffic light is indicating " + light_color + " Light.");
+                System.out.println("Stop!!! Because the traffic light is indicating " + light_color + " Light."); // This case gets executed.
                 break;
             case "Yellow":
                 System.out.println("Slow down!! and Be careful. Because the traffic light is indicating " + light_color + " Light.");
@@ -193,7 +194,104 @@ public class Main
                 System.out.println("This traffic is under maintenance. Please follow the traffic police's signals.");
         }
 
-        // Try altering the values of the variables declared which are discussed in the examples and observe the changes.
+        // There are some more examples for the switch case along with the above.
+        // 1. Intentional fall-through(Multiple cases, single action) - above examples and an example of mentioning the season, as a particular season is for more than one month can be implemented using this structure.
+        // 2. Modern Enhanced switch Expression(Java 14+) - above examples and an example of specifying the calories of a particular fruit can be implemented using this structure.
+
+        System.out.println();
+
+        // 1. Intentional fall-through(Multiple cases, single action):
+        // If the break statement is omitted, Java/Program falls through the next case block automatically.
+        // You can use this to group multiple conditions together.
+
+        System.out.println("4. Intentional fall-through - an example of mentioning the season:");
+        int monthNumber = 12;
+        String season; // Variables can be declared without initialising. This is called default initialising and the object or primitive is declared with the default value.
+        // default values for primitives and objects
+        // 1. 0 - short, byte and int
+        // 2. 0l or 0L - long
+        // 3. 0.0f and 0.0d or 0.0 - floats and doubles
+        // 4. '' - char(single character primitvie data type)
+        // 5. false - boolean
+        // 6. "" - String object(sequential character/ sequence of characters primitvie data type)
+
+        // Seasons in India
+        switch(monthNumber) {
+            case 12:
+            case 1:
+                System.out.println("Its winter season. As the month's number specified is: " + monthNumber + ".");
+                break; // Winter season ends here.
+            case 2:
+                System.out.println("Its spring season. As the month's number specified is: " + monthNumber + ".");
+                break;
+            case 3:
+                System.out.println("Its spring season. As the month's number specified is: " + monthNumber + ". Post winter and spring starts from here.");
+                break; // Spring season ends here.
+            case 4:
+            case 5:
+                System.out.println("Its summer season. As the month's number specified is: " + monthNumber + ".");
+                break;
+            case 6:
+                System.out.println("Its summer season. As the month's number specified is: " + monthNumber + ". Post summer and monsoon starts from here.");
+                break; // Summer season ends here.
+            case 7:
+            case 8:
+                System.out.println("Its Monsoon/Rainy season. As the month's number specified is: " + monthNumber + ".");
+                break;
+            case 9:
+                System.out.println("Its Monsoon/Rainy season. As the month's number specified is: " + monthNumber + ". Post monsoon and autumn starts from here.");
+                break; // Monsoon/Rainy season ends here.
+            case 10:
+            System.out.println("Its Autumn season. As the month's number specified is: " + monthNumber + ".");
+                break;
+            case 11:
+                System.out.println("Its Autumn season. As the month's number specified is: " + monthNumber + ". Post autumn and winter starts from here.");
+                break; // Autumn season ends here.
+            default:
+                System.out.println("Invalid or default month number specified. Month number is: " + monthNumber + ". Please give month number between 1 and 12.");
+                break;
+        }
+
+        System.out.println();
+
+        // 2. Modern Enhanced switch Expression(Java 14+):
+        // Modern Java versions introduce Switch Expressions.
+        // They use an arrow syntax(->) that eliminates the risk of accidental fall-through because it implicitly handles breaks.
+        // They also can return a value directly.
+
+        System.out.println("5. Modern Enhanced switch Expression(Java 14+) - an example of mentioning the season:");
+        monthNumber = 11; // Let's change the month number to 11.
+        season = switch(monthNumber) {
+            case 12, 1 -> "Its winter season. As the month's number specified is: " + monthNumber + "."; // Winter season ends here.
+            case 2 -> "Its spring season. As the month's number specified is: " + monthNumber + "."; 
+            case 3 -> "Its spring season. As the month's number specified is: " + monthNumber + ". Post winter and spring starts from here."; // Spring season ends here.
+            case 4, 5 -> "Its summer season. As the month's number specified is: " + monthNumber + ".";
+            case 6 -> "Its summer season. As the month's number specified is: " + monthNumber + ". Post summer and monsoon starts from here."; // Summer season ends here.
+            case 7, 8 -> "Its Monsoon/Rainy season. As the month's number specified is: " + monthNumber + ".";
+            case 9 -> "Its Monsoon/Rainy season. As the month's number specified is: " + monthNumber + ". Post monsoon and autumn starts from here."; // Monsoon/Rainy season ends here.
+            case 10 -> "Its Autumn season. As the month's number specified is: " + monthNumber + ".";
+            case 11 -> "Its Autumn season. As the month's number specified is: " + monthNumber + ". Post autumn and winter starts from here."; // Autumn season ends here.
+            default -> "Invalid or default month number specified. Month number is: " + monthNumber + ". Please give month number between 1 and 12.";
+        };
+
+        System.out.println(season);
+
+        System.out.println();
+
+        System.out.println("6. Modern Enhanced switch Expression(Java 14+) - an example of specifying the calories of a particular fruit.");
+        String fruit = "Banana";
+
+        // Assigns a value directly from the switch logic
+        int calories = switch(fruit) {
+            case "Apple", "Pear" -> 95; // Multiple constants on one line
+            case "Banana" -> 105;
+            case "Orange" -> 62;
+            default -> 0; // Required if checking all options isn't gaurenteed.
+        };
+        
+        System.out.println(fruit + " has " + calories + " calories.");
+
+        // Try altering the values of the variables declared discussed in the examples and observe the changes.
         // The above all conditional statements are almost similar to the switches connected between the branches in logic gates and other electrical and electronic circuits.
     }
 }
