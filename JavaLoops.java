@@ -395,6 +395,7 @@ public class Main
         // 1. length() - calculates the length of the string.
         // 2. substring(start, end) - fetches out the substring from the main string from start till end.
         // 3. charAt(x) - fetches out the character present at xth position. Used in later topics related string management.
+        // 4. repeat(x) - repeats the string for x number of times.
 
         System.out.println("25. Using single for-loop for printing inverted right-angled triangle:");
         s = "*****";
