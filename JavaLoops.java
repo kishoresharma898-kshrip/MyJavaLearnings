@@ -440,6 +440,32 @@ public class Main
             s = s.substring(0, k-1);
             result = ""; // Should always be given here
         }
+
+        System.out.println();
+
+        System.out.println("28. Nested for-loop for printing equilateral triangle:");
+        // Note: The value of n should always be in odd numbers, so that this loop will print inverted right-angled triangle with sharp vertices.
+        s = "*"; // Overwriting s with "*"
+        result = ""; // Overwriting result with ""(empty string)
+        temp = ""; // Overwriting temp with ""
+        String resultant = ""; // Initialising resultant(buffer result) with ""
+        n = 9;
+        i = (n - 1) / 2; // i is taken with this expression so that unnecessary white spaces won't get added.
+        for (int k = 1; k <= n; k++) {
+            for (int l = k; l <= k; l++) {
+                result += s;
+                if (l % 2 != 0) {
+                    temp = " ";
+                    temp = temp.repeat(i);
+                    resultant = temp + result;
+                    System.out.println(resultant);
+                    resultant = "";
+                    i--;
+                }
+            }
+        }
+
+        // Alter the values of n and s to observe the changes happen to the patterns and make an eye on the side comments so that no pattern prints in undesirable pattern.
         
         // So, in this way the loops are useful for iterating a process for required number of times.
         // Loops are very useful for iterating or travesing over Strings, arrays and other objects.
