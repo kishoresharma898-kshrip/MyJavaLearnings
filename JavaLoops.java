@@ -423,7 +423,7 @@ public class Main
 
         System.out.println();
 
-        System.out.println("27. Using single for-loop to print inverted triangle:");
+        System.out.println("27. Using single for-loop to print inverted equilateral triangle:");
         // Note: The length of string s should always be in odd numbers, so that this loop will print inverted right-angled triangle with sharp vertices.
         s = "*******"; result = "";
         String temp = "";
