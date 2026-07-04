@@ -408,27 +408,64 @@ public class Main
         }
 
         System.out.println();
+        
+        System.out.println("26. Nested for-loop for printing inverted right-angled triangle:");
+        s = "*****";
+        result = ""; // Initialising result with ""(empty string)
+        String temp = ""; // Initialising temp with ""
+        for (int k = s.length(); k > 0; k--) {
+            result += s;
+            System.out.println(result);
+            // Replaced substring() method with nested for-loop.
+            for (int l = 0; l < k-1; l++) {
+                temp += s.charAt(l);
+            }
+            s = temp;
+            temp = "";
+            result = "";
+        }
 
-        System.out.println("26. Using single for-loop to print inverted right-angled triangle with odd lines:");
-        // Note: The length of string s should always be in odd numbers, so that this loop will print inverted right-angled triangle with sharp vertices.
+        System.out.println();
+
+        System.out.println("27. Using single for-loop to print inverted right-angled triangle with odd lines:");
         s = "*******"; result = "";
         for (int k = s.length(); k > 0; k--) {
             if (k % 2 != 0) {
                 result += s;
                 System.out.println(result);
-                result = ""; // Can be given here (or)
+                // result = ""; // Can be given here (or)
             }
             s = s.substring(0, k-1);
-            // result = ""; // Can be given here as well
+            result = ""; // Can be given here as well
         }
 
         System.out.println();
 
-        System.out.println("27. Using single for-loop to print inverted equilateral triangle:");
-        // Note: The length of string s should always be in odd numbers, so that this loop will print inverted right-angled triangle with sharp vertices.
-        s = "*******"; result = "";
-        String temp = "";
+        System.out.println("28. Nested for-loop for printing inverted right-angled triangle with odd lines:");
+        s = "******";
+        result = ""; // Overwriting result with ""(empty string)
+        temp = ""; // Overwriting temp with ""
+        for (int k = s.length(); k > 0; k--) {
+            if (k % 2 != 0) {
+                result += s;
+                System.out.println(result);
+            }
+            // Replaced substring() method with nested for-loop.
+            for (int l = 0; l < k-1; l++) {
+                temp += s.charAt(l);
+            }
+            s = temp;
+            temp = "";
+            result = "";
+        }
+
+        System.out.println();
+
+        System.out.println("29. Using single for-loop to print equilateral inverted triangle:");
+        s = "********"; result = "";
+        temp = "";
         i = 1; // Overwriting i as it is already defined.
+        // Note: The for loop will always run for odd values of k so that the triangle will print with sharp vertices.
         for (int k = s.length(); k > 0; k--) {
             if (k % 2 != 0) {
                 result += s;
@@ -444,15 +481,15 @@ public class Main
 
         System.out.println();
 
-        System.out.println("28. Nested for-loop for printing equilateral triangle:");
-        // Note: The value of n should always be in odd numbers, so that this loop will print inverted right-angled triangle with sharp vertices.
+        System.out.println("30. Nested for-loop for printing equilateral triangle:");
         s = "*"; // Overwriting s with "*"
         result = ""; // Overwriting result with ""(empty string)
         temp = ""; // Overwriting temp with ""
         String resultant = ""; // Initialising resultant(buffer result) with ""
-        n = 9;
+        n = 8;
         i = (n - 1) / 2; // i is taken with this expression so that unnecessary white spaces won't get added.
         for (int k = 1; k <= n; k++) {
+            // Note: The for loop will always run for odd values of l(or k) so that the triangle will print with sharp vertices.
             for (int l = k; l <= k; l++) {
                 result += s;
                 if (l % 2 != 0) {
