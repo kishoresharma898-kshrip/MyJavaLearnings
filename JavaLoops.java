@@ -77,7 +77,7 @@ public class Main
 
         System.out.println("\n");
 
-        // The iteration variable cannot be accessed outside the loop. It we try to do it, then error/exception may occur which is undesirable.
+        // The iteration variable cannot be accessed outside the loop. If we try to do it, then error/exception may occur which is undesirable.
         // Uncomment the below lines of code to observe the error.
         
         // System.out.println("6. Printing integers up to " + n + ". With iteration variable starting from 0:");
