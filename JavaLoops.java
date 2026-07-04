@@ -61,7 +61,7 @@ public class Main
 
         System.out.println("\n");
 
-        // In some cases it the requirement can be just up to n(it is like till n but, excluding the n)
+        // In some cases the requirement can be just up to n(it is like till n but, excluding the n)
         
         System.out.println("4. Printing integers up to " + n + ". With iteration variable starting from 1:");
         for (int i = 1; i < 5; i++) {
