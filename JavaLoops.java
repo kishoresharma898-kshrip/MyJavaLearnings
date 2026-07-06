@@ -503,6 +503,8 @@ public class Main
             }
         }
 
+        System.out.println();
+
         // One more application of using this nested for loop is that we can create something Floyd's trianlge.
         // Floyd's triangle is a triangular pattern where the integers will be placed in th shape of a right-anlged triangle.
         // Each integer is placed such a way that the first line will be 1 and the second contains 2 and 3. The 3rd line contains 4, 5 and 6 and so on.
