@@ -503,6 +503,21 @@ public class Main
             }
         }
 
+        // One more application of using this nested for loop is that we can create something Floyd's trianlge.
+        // Floyd's triangle is a triangular pattern where the integers will be placed in th shape of a right-anlged triangle.
+        // Each integer is placed such a way that the first line will be 1 and the second contains 2 and 3. The 3rd line contains 4, 5 and 6 and so on.
+        // First line contains only 1 integer, second line contains the next two integers, 3rd contains the next 3 integers and 4th contains the next 4 and so on.
+        System.out.println("31. Nested for-loop for printing Floyd's triangle:");
+        n = 5; // Overwriting n with 5
+        int sum = 0;
+        for (int k = 1; k <= n; k++) { // k should be within the range of n
+            for (int l = 1; l <= k; l++) { // l should be within the range of k starting from 1
+                sum += 1;
+                System.out.printf("%d ", sum);
+            }
+            System.out.println();
+        }
+
         // Alter the values of n and s to observe the changes happen to the patterns and make an eye on the side comments so that no pattern prints in undesirable pattern.
         
         // So, in this way the loops are useful for iterating a process for required number of times.
