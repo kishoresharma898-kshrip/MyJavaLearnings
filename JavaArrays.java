@@ -290,7 +290,7 @@ public class Main
             {5, 4, 0}
         }*/
 
-        // So, ultimately the matrix multiplication algorithm is done on the matrices consodering that both are of 3x3 dimensions.
+        // So, ultimately the matrix multiplication algorithm is done on the matrices considering that both are of 3x3 dimensions.
         // Like matrix addition, matrix multiplication also requires the usage of nested loops.
 
         // The matrix multiplication operation for the above two matrices is done as follows:
