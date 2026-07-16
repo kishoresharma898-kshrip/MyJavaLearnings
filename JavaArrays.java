@@ -526,5 +526,71 @@ public class Main
         int[] doublesOfInts = new int[6];
         Arrays.setAll(doublesOfInts, i -> i * 2); // i -> i * 2 is a lambda expression that makes each element, to double the value of it.
         System.out.println("Doubles of the integers array is: " + Arrays.toString(doublesOfInts)); // [0, 2, 4, 6, 8, 10]
+
+        // So, in this way we can initialise, assign elements and alter the elements of arrays using the property and the API methods as shown above.
+        // The same follows for all the primitive data type arrays like all kinds of integers, floating points, characters and Strings.
+
+        System.out.println();
+
+        // The following process is for the character type array:
+        // 1. Initialisation:
+
+        System.out.println("Character type arrays:");
+        char[] charactersObj = new char[5]; // An empty character type array object of length 5.
+        char[] charactersLit = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'}; // Also a character type array but, its a literal.
+
+        // 2. Assigning elements:
+
+        Arrays.fill(charactersObj, 'h'); // ['h', 'h', 'h', 'h', 'h']
+        System.out.println("Characters array object before altering: " + Arrays.toString(charactersObj)); // [h, h, h, h, h]
+        System.out.println("Characters array literal before altering: " + Arrays.toString(charactersLit)); // [H, e, l, l, o,  , W, o, r, l, d, !]
+
+        // 3. Altering elements:
+
+        charactersObj[1] = 'e';
+        charactersObj[2] = 'l';
+        charactersObj[3] = 'l';
+        charactersObj[4] = 'o';
+
+        charactersLit[6] = 'J';
+        charactersLit[7] = 'a';
+        charactersLit[8] = 'v';
+        charactersLit[9] = 'a';
+        charactersLit[10] = '!';
+        charactersLit[11] = '!';
+
+        System.out.println("Characters array object after altering: " + Arrays.toString(charactersObj)); // [h, e, l, l, o]
+        System.out.println("Characters array literal after altering: " + Arrays.toString(charactersLit)); // [H, e, l, l, o,  , J, a, v, a, !, !]
+
+        System.out.println();
+
+        // The same follows for Strings as well. But, Strings are objects and not primitive like the others.
+        // Strings themselves contain both object and literal types. But, in depth discussion about them is not required here as of now.
+
+        // The following is the way to operate on String type arrays.
+
+        // 1. Initialisation:
+        System.out.println("String type arrays:");
+        String[] stringsObj = new String[3]; // An empty string type array object.
+        String[] stringLiteral = {"Hello", " ", "World!"}; // Also a string type array but, its a literal
+
+        // 2. Assigning elements:
+
+        stringsObj[0] = "Hello";
+        stringsObj[1] = " ";
+        stringsObj[2] = "Java!!";
+
+        
+        System.out.println("String array object before altering: " + Arrays.toString(stringsObj));
+        System.out.println("String array literal before altering: " + Arrays.toString(stringLiteral));
+
+        // 3. Altering elements:
+
+        stringsObj[2] = "World!";
+        stringLiteral[2] = "Java!!";
+
+
+        System.out.println("String array object after altering: " + Arrays.toString(stringsObj));
+        System.out.println("String array literal after altering: " + Arrays.toString(stringLiteral));
     }
 }
